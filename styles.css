@@ -3,3 +3,17 @@
     margin: auto;
     text-align: center;
 }
+
+#buttonDiv{
+    position: relative;
+    top: 10px;
+    font-family: "Ink Free";
+}
+
+#bottom {
+    top: 20px;
+}
+
+#word,#guessedLetters{
+    font-family: "Ink Free";
+}

@@ -2,7 +2,7 @@ var word = "";
 var animals = ["dog","cat","mouse","alligator","peacock","cow","platypus","dolphin","freddie","squirrel","centipede","leopard","giraffe"];
 var places = ["mars","canada","maine","honolulu","berkeley","babylon","kazakhstan","zimbabwe","oslo","constantinople","sumeria","persia"];
 var poet = ["poe","shakespeare","frost","brooks","dickinson","angelou","hughes","silverstein","wilde","eliot","stevenson"];
-var religion = ["zoroastrianism","christianity","judaism","islam","jainism"];
+var religion = ["zoroastrianism","christianity","judaism","islam","jainism","buddhism","hinduism","shinto","mazdakism","asatru"];
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var guesses = 6;
 var guessedLetters = "";
@@ -46,6 +46,7 @@ function startGame(){
 
     document.getElementById("word").innerHTML = blank;
     document.getElementById("guesses").innerHTML = guesses + " Guesses Left";
+    document.getElementById("picture").src = "images/gallow.PNG";
 }
 
 function printWord(){
@@ -63,6 +64,7 @@ function printWord(){
 function guessLetter(letter){
     if(word.indexOf(letter) === -1){
         guesses--;
+        document.getElementById("picture").src = "images/h" + guesses + ".PNG";
     }
 
     document.getElementById(letter).disabled = true;
