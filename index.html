@@ -5,11 +5,12 @@
     <title>Hangman</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
     <script src="script.js"></script>
 </head>
 <body onload="setUp()">
 <div id="top">
-    <h1>Let's Play Hangman</h1>
+    <h1 id="title">Let's Play Hangman</h1>
     <select id="option">
         <option>Choose a Category</option>
         <option>Animals</option>
@@ -17,7 +18,7 @@
         <option>Dead Poets</option>
         <option>Religions</option>
     </select>
-    <button onclick="startGame()" class="w3-button w3-black">New Game</button>
+    <button onclick="startGame()" class="w3-button w3-black" id="start">New Game</button>
     <br>
 
     <div id="buttonDiv"></div>
@@ -27,6 +28,7 @@
 
 <div id="bottom">
     <div id="guesses"></div>
+    <div id="wrong"></div>
     <div id="guessedLetters"></div>
     <div id="word"></div>
     <div id="end"></div>
